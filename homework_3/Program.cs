@@ -67,8 +67,8 @@ void PrintArray(int[,] matrix)
     }
 }
 
-int number1 = InputNumbers("Введите количество строк матрицы: ");
-int number2 = InputNumbers("Введите количество столбцов матрицы: ");
+int number1 = InputNumbers("Введите количество строк первой матрицы: ");
+int number2 = InputNumbers("Введите количество столбцов первой матрицы: ");
 int number3 = InputNumbers("Введите количество столбцов второй матрицы: ");
 int left = InputNumbers("Введите левую границу значения элементов: ");
 int right = InputNumbers("Введите правую границу значения элементов: ");
@@ -77,6 +77,7 @@ int[,] matrix1 = FillRandomMatrix(number1, number2, left, right);
 System.Console.WriteLine();
 int[,] matrix2 = FillRandomMatrix(number2, number3, left, right);
 System.Console.WriteLine();
-System.Console.WriteLine("Произведение матриц равно");
-int[,] multiplication = MultiplicationMatrix[matrix1, matrix2];
+System.Console.WriteLine("Произведение матриц равно: ");
+System.Console.WriteLine();
+int[,] multiplication = MultiplicationMatrix(matrix1, matrix2);
 PrintArray(multiplication);
